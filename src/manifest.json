@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Angular Web Extension Template by Dreez",
+  "description": "A starter template for Angular web extensions.",
+  "version": "1.0",
+  "short_name": "angular-web-extension",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "author": "",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "tabs"],
+  "browser_action": {
+    "default_title": "Angular Web Extension by Dreez",
+    "default_popup": "index.html"
+  }
+}
