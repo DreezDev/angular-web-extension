@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://dreez.dev/" target="blank"><img src="https://pzru59myydrcwadu.public.blob.vercel-storage.com/Angular-web-ext.png" width="600" alt="Angular for Web Extension Logo" /></a>
+  <a href="http://dreez.dev/" target="blank"><img src="https://pzru59myydrcwadu.public.blob.vercel-storage.com/Angular-web-ext.png" width="500" alt="Angular for Web Extension Logo" /></a>
 </p>
 
 <p align="center">
