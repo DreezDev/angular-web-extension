@@ -51,9 +51,9 @@
     line-height: 100%;
     letter-spacing: -0.125rem;
     margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   p {
@@ -78,10 +78,10 @@
 
   .content {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     width: 100%;
     max-width: 700px;
-    margin-bottom: 3rem;
   }
 
   .content h1 {
@@ -93,17 +93,19 @@
   }
 
   .divider {
-    width: 1px;
+    min-width: 100%;
+    min-height: 2px;
     background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
+    margin-top: 15px;
   }
 
   .pill-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: start;
     flex-wrap: wrap;
     gap: 1.25rem;
+    margin-top: 25px;
   }
 
   .pill {
@@ -133,9 +135,11 @@
   .pill-group .pill:nth-child(6n + 1) {
     --pill-accent: var(--bright-blue);
   }
+
   .pill-group .pill:nth-child(6n + 2) {
     --pill-accent: var(--french-violet);
   }
+
   .pill-group .pill:nth-child(6n + 3),
   .pill-group .pill:nth-child(6n + 4),
   .pill-group .pill:nth-child(6n + 5) {
@@ -150,7 +154,7 @@
     display: flex;
     align-items: center;
     gap: 0.73rem;
-    margin-top: 1.5rem;
+    margin-top: 35px;
   }
 
   .social-links path {
@@ -164,13 +168,12 @@
 
   @media screen and (max-width: 650px) {
     .content {
-      flex-direction: column;
+      flex-direction: row;
       width: max-content;
     }
 
     .divider {
-      height: 1px;
-      width: 100%;
+      width: 100px;
       background: var(--red-to-pink-to-purple-horizontal-gradient);
       margin-block: 1.5rem;
     }
@@ -222,46 +225,46 @@
             <stop offset=".526" stop-color="#CC26D5" />
             <stop offset="1" stop-color="#7702FF" />
           </linearGradient>
-          <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
+          <clipPath id="a">
+            <path fill="#fff" d="M0 0h982v239H0z" />
+          </clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <h1 style="font-weight: 600; color: rgb(44, 44, 44)">
+        Angular for Web Extensions
+      </h1>
+      <p>Congratulations! Your extension is running. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
-        @for (item of [
-          { title: 'Explore the Docs', link: 'https://angular.dev' },
-          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-        ]; track item.title) {
-          <a
-            class="pill"
-            [href]="item.link"
-            target="_blank"
-            rel="noopener"
+        @for (item of [ 
+                { title: 'Dreez Dev', link: 'https://dreez.dev'},
+                { title: 'Buy me a coffe', link: 'https://buymeacoffee.com/dreezdev' },
+                { title: 'Angular Docs', link: 'https://angular.dev/' },
+                { title: 'Web Extension Polyfill', link: 'https://github.com/mozilla/webextension-polyfill' },
+                { title: 'MDN Docs (Recommend)', link: 'https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions' },
+                { title: 'Chrome Docs', link: 'https://developer.chrome.com/docs/extensions' },
+              ]; track item.title) {
+        <a class="pill" [href]="item.link" target="_blank" rel="noopener">
+          <span>{{ item.title }}</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="14"
+            viewBox="0 -960 960 960"
+            width="14"
+            fill="currentColor"
           >
-            <span>{{ item.title }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="14"
-              viewBox="0 -960 960 960"
-              width="14"
-              fill="currentColor"
-            >
-              <path
-                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
-              />
-            </svg>
-          </a>
+            <path
+              d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+            />
+          </svg>
+        </a>
         }
       </div>
       <div class="social-links">
         <a
-          href="https://github.com/angular/angular"
+          href="https://github.com/DreezDev/angular-web-extension"
           aria-label="Github"
           target="_blank"
           rel="noopener"
@@ -280,7 +283,7 @@
           </svg>
         </a>
         <a
-          href="https://twitter.com/angular"
+          href="https://x.com/DreezDev"
           aria-label="Twitter"
           target="_blank"
           rel="noopener"
@@ -298,27 +301,6 @@
             />
           </svg>
         </a>
-        <a
-          href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw"
-          aria-label="Youtube"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="29"
-            height="20"
-            viewBox="0 0 29 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Youtube"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z"
-            />
-          </svg>
-        </a>
       </div>
     </div>
   </div>
@@ -331,6 +313,5 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 
 <router-outlet />
