@@ -1,27 +1,50 @@
-# AngularWebExtension
+<p align="center">
+  <a href="http://dreez.dev/" target="blank"><img src="https://pzru59myydrcwadu.public.blob.vercel-storage.com/Angular-web-ext.png" width="200" alt="Angular for Web Extension Logo" /></a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+<p align="center">
+  'Angular for Web Extension' is a template to get started with development in Chrome and Firefox using webextension-polyfill and web-ext library.
+</p>
+<p align="center">
+  <a href="https://github.com/DreezDev/nest-jwt-template" target="_blank">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Template License" />
+  </a>
+  <a href="https://buymeacoffee.com/dreezdev" target="_blank">
+    <img src="https://img.shields.io/badge/Donate-Buy%20Me%20a%20Coffe-ffdd00.svg"/>
+  </a>
+  <a href="https://x.com/DreezDev" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/dreezdev.svg?style=social&label=Follow">
+  </a>
+</p>
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Development in [Angular](https://angular.dev/) implementing [Web Extension Polyfil](https://github.com/mozilla/webextension-polyfill), [Web-ext](https://github.com/mozilla/web-ext) and [Nodemon](https://github.com/remy/nodemon) to hotfix reload on the browser.
 
-## Code scaffolding
+## Why Angular for Web Extension?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I created this template to offer a simple and fast solution to create web extensions with Angular, since searching on this topic I did not find much information about its configuration, libraries or templates to start with it.
 
-## Build
+That is why I took the initiative to start a project to be able to do this more quickly.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Why Web Extension Polyfill?
 
-## Running unit tests
+This Mozilla library allows us to use its API which allows us to use a single code to access the Chrome and Mozilla API without compatibility issues.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can read more about this in its official documentation: [Web Extension Polyfil](https://github.com/mozilla/webextension-polyfill).
 
-## Running end-to-end tests
+## Running the app
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run `npm run watch:firefox` or `npm run watch:chrome` to running the project and open on the browser.
 
-## Further help
+## Support and credits
+
+- Author - [Andry Mendoza](https://dreez.dev/)
+- Email - [contacto@dreez.dev](mailto:contacto@dreez.dev)
+- X - [@DreezDev](https://x.com/DreezDev/)
+
+## License
+
+This template are MIT licensed.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
